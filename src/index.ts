@@ -1,13 +1,17 @@
 import fs from 'fs';
 import path from 'path';
+import house2223 from './2223.json';
 import house2231 from './2231.json';
 import house2234 from './2234.json';
 import house2242 from './2242.json';
 import house2246 from './2246.json';
 import house2250 from './2250.json';
+import house2257 from './2257.json';
 import house2273 from './2273.json';
+import house2279 from './2279.json';
 
 const maxDate = new Date(2018, 4, 1);
+const delimiter = ',';
 
 interface EstimatePoint {
    /** Millisecond time stamp */
@@ -86,10 +90,10 @@ function main(...estimates: ZillowChart[]) {
       });
 
       if (!headersReady) {
-         rows.push(header.join('|'));
+         rows.push(header.join(delimiter));
          headersReady = true;
       }
-      rows.push(column.join('|'));
+      rows.push(column.join(delimiter));
    });
 
    const csv = rows.join('\n');
@@ -105,4 +109,14 @@ function main(...estimates: ZillowChart[]) {
    );
 }
 
-main(house2231, house2234, house2242, house2246, house2250, house2273);
+main(
+   house2242,
+   house2223,
+   house2231,
+   house2234,
+   house2246,
+   house2250,
+   house2257,
+   house2273,
+   house2279
+);
