@@ -10,7 +10,7 @@ import house2257 from './2257.json';
 import house2273 from './2273.json';
 import house2279 from './2279.json';
 
-const maxDate = new Date(2018, 4, 1);
+const maxDate = new Date(2018, 12, 31);
 const delimiter = ',';
 
 interface EstimatePoint {
