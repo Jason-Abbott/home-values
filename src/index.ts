@@ -7,7 +7,7 @@ import house2246 from './2246.json';
 import house2250 from './2250.json';
 import house2273 from './2273.json';
 
-const maxDate = new Date(2018, 12, 31);
+const maxDate = new Date(2018, 4, 1);
 
 interface EstimatePoint {
    /** Millisecond time stamp */
