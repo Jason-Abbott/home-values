@@ -1,0 +1,16 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "Build",
+         "command": "./node_modules/.bin/ts-node",
+         "args": ["./src/index.ts"],
+         "presentation": {
+            "clear": true
+         },
+         "type": "shell",
+         "group": "build",
+         "problemMatcher": ["$tsc"]
+      }
+   ]
+}
